@@ -19,13 +19,12 @@
     .top-nav a.active { text-decoration: underline; }
 
     .ad-banner { width:100%; max-width:728px; margin:20px auto; padding:20px; border:2px dashed #888; background:#fff; text-align:center; }
-
     .container { display: flex; max-width: 1200px; margin: 20px auto; gap:20px; padding: 0 20px; }
     .sidebar-left, .sidebar-right { flex: 1 1 200px; background: #fff; padding:15px; border:1px solid #ddd; border-radius:6px; }
     .main { flex: 2 1 600px; }
 
     .search-box { margin-bottom: 20px; }
-    .search-box input[type="text"] { width: calc(100% - 40px); padding:8px; border:1px solid #ccc; border-radius:4px; }
+    .search-box input[type="text"] { width: calc(100% - 100px); padding:8px; border:1px solid #ccc; border-radius:4px; }
     .search-box button { padding:8px 12px; border:none; background:#0099cc; color:#fff; border-radius:4px; cursor:pointer; }
     .search-box button:hover { background:#007a99; }
 
@@ -35,7 +34,9 @@
     .icons img { height:40px; margin-right:10px; vertical-align: middle; }
 
     .articles { margin-bottom:20px; }
-    .articles .post { background:#fff; margin-bottom:15px; padding:15px; border:1px solid #ddd; border-radius:6px; }
+    .articles .post { display:flex; align-items:flex-start; background:#fff; margin-bottom:15px; padding:15px; border:1px solid #ddd; border-radius:6px; }
+    .post-thumbnail { flex:0 0 120px; width:120px; height:80px; object-fit:cover; margin-right:15px; border-radius:4px; }
+    .post-content { flex:1; }
     .post-title { font-size:1.2rem; margin-bottom:5px; display:block; color:#e68a00; }
     .post-date { font-size:.9rem; color:#777; margin-bottom:10px; display:block; }
     .post-excerpt { margin-bottom:10px; }
@@ -43,17 +44,17 @@
 
     .ad-inline { margin:20px 0; padding:15px; border:2px dashed #888; background:#fff; text-align:center; }
 
+    .newsletter { background:#fff; padding:15px; border:1px solid #ddd; border-radius:6px; text-align:center; margin-top:20px; }
+    .newsletter input[type="email"] { width: 80%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px; }
+    .newsletter button { padding:8px 12px; border:none; background:#e68a00; color:#fff; border-radius:4px; cursor:pointer; }
+    .newsletter button:hover { background:#bf6b00; }
+
     .bottom-nav { background: #ffcc00; padding: 10px 0; text-align: center; margin-top:20px; }
     .bottom-nav a { margin: 0 10px; color:#333; }
     .bottom-nav a.active { text-decoration: underline; }
 
     footer { background: linear-gradient(135deg, #0099cc, #66ccff); color: white; text-align: center; padding:20px; margin-top:20px; }
     footer p { font-size:.9rem; }
-
-    .newsletter { background:#fff; padding:15px; border:1px solid #ddd; border-radius:6px; text-align:center; margin-top:20px; }
-    .newsletter input[type="email"] { width: 80%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px; }
-    .newsletter button { padding:8px 12px; border:none; background:#e68a00; color:#fff; border-radius:4px; cursor:pointer; }
-    .newsletter button:hover { background:#bf6b00; }
   </style>
 </head>
 <body>
@@ -112,17 +113,23 @@
       <section class="articles">
         <!-- Article Posts -->
         <article class="post">
-          <a href="article1.html" class="post-title">Understanding Bypass Filtration: A Complete Overview</a>
-          <span class="post-date">May 1, 2025</span>
-          <p class="post-excerpt">Get an in-depth look at how bypass filters work and why they're essential for your water treatment system.</p>
-          <a href="article1.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article1.jpg" alt="Bypass Filtration Overview">
+          <div class="post-content">
+            <a href="article1.html" class="post-title">Understanding Bypass Filtration: A Complete Overview</a>
+            <span class="post-date">May 1, 2025</span>
+            <p class="post-excerpt">Get an in-depth look at how bypass filters work and why they're essential for your water treatment system.</p>
+            <a href="article1.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article2.html" class="post-title">Top 5 Benefits of Bypass Filter Installation</a>
-          <span class="post-date">April 28, 2025</span>
-          <p class="post-excerpt">Discover the key advantages of adding a bypass filter to your setup, from efficiency gains to cost savings.</p>
-          <a href="article2.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article2.jpg" alt="Benefits of Bypass Filters">
+          <div class="post-content">
+            <a href="article2.html" class="post-title">Top 5 Benefits of Bypass Filter Installation</a>
+            <span class="post-date">April 28, 2025</span>
+            <p class="post-excerpt">Discover the key advantages of adding a bypass filter to your setup, from efficiency gains to cost savings.</p>
+            <a href="article2.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <div class="ad-inline">
@@ -131,31 +138,43 @@
         </div>
 
         <article class="post">
-          <a href="article3.html" class="post-title">Choosing the Right Bypass Filter for Your Needs</a>
-          <span class="post-date">April 20, 2025</span>
-          <p class="post-excerpt">A step-by-step guide to selecting the perfect bypass filter model based on your application requirements.</p>
-          <a href="article3.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article3.jpg" alt="Choosing Filters">
+          <div class="post-content">
+            <a href="article3.html" class="post-title">Choosing the Right Bypass Filter for Your Needs</a>
+            <span class="post-date">April 20, 2025</span>
+            <p class="post-excerpt">A step-by-step guide to selecting the perfect bypass filter model based on your application requirements.</p>
+            <a href="article3.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article4.html" class="post-title">Installation Checklist: Bypass Filters Made Easy</a>
-          <span class="post-date">April 15, 2025</span>
-          <p class="post-excerpt">Ensure a smooth installation process with our comprehensive checklist of tools and best practices.</p>
-          <a href="article4.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article4.jpg" alt="Installation Checklist">
+          <div class="post-content">
+            <a href="article4.html" class="post-title">Installation Checklist: Bypass Filters Made Easy</a>
+            <span class="post-date">April 15, 2025</span>
+            <p class="post-excerpt">Ensure a smooth installation process with our comprehensive checklist of tools and best practices.</p>
+            <a href="article4.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article5.html" class="post-title">Preventative Maintenance Tips for Longevity</a>
-          <span class="post-date">April 10, 2025</span>
-          <p class="post-excerpt">Learn how regular maintenance can extend the life of your bypass filter and maintain peak performance.</p>
-          <a href="article5.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article5.jpg" alt="Maintenance Tips">
+          <div class="post-content">
+            <a href="article5.html" class="post-title">Preventative Maintenance Tips for Longevity</a>
+            <span class="post-date">April 10, 2025</span>
+            <p class="post-excerpt">Learn how regular maintenance can extend the life of your bypass filter and maintain peak performance.</p>
+            <a href="article5.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article6.html" class="post-title">Common Troubleshooting Scenarios and Fixes</a>
-          <span class="post-date">April 5, 2025</span>
-          <p class="post-excerpt">Facing issues? Here are quick fixes for the most common bypass filter problems.</p>
-          <a href="article6.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article6.jpg" alt="Troubleshooting Scenarios">
+          <div class="post-content">
+            <a href="article6.html" class="post-title">Common Troubleshooting Scenarios and Fixes</a>
+            <span class="post-date">April 5, 2025</span>
+            <p class="post-excerpt">Facing issues? Here are quick fixes for the most common bypass filter problems.</p>
+            <a href="article6.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <div class="ad-inline">
@@ -164,31 +183,43 @@
         </div>
 
         <article class="post">
-          <a href="article7.html" class="post-title">DIY vs Professional Installation: Pros and Cons</a>
-          <span class="post-date">March 30, 2025</span>
-          <p class="post-excerpt">Should you tackle installation yourself or hire a pro? We break down the costs and benefits.</p>
-          <a href="article7.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article7.jpg" alt="DIY vs Professional">
+          <div class="post-content">
+            <a href="article7.html" class="post-title">DIY vs Professional Installation: Pros and Cons</a>
+            <span class="post-date">March 30, 2025</span>
+            <p class="post-excerpt">Should you tackle installation yourself or hire a pro? We break down the costs and benefits.</p>
+            <a href="article7.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article8.html" class="post-title">Upgrading Older Systems with Modern Bypass Filters</a>
-          <span class="post-date">March 22, 2025</span>
-          <p class="post-excerpt">Learn how to retrofit legacy water treatment setups with today's bypass filter technology.</p>
-          <a href="article8.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article8.jpg" alt="Upgrading Systems">
+          <div class="post-content">
+            <a href="article8.html" class="post-title">Upgrading Older Systems with Modern Bypass Filters</a>
+            <span class="post-date">March 22, 2025</span>
+            <p class="post-excerpt">Learn how to retrofit legacy water treatment setups with today's bypass filter technology.</p>
+            <a href="article8.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article9.html" class="post-title">Environmental Impact of Bypass Filtration Systems</a>
-          <span class="post-date">March 15, 2025</span>
-          <p class="post-excerpt">Explore how bypass filters contribute to sustainability efforts and water conservation.</p>
-          <a href="article9.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article9.jpg" alt="Environmental Impact">
+          <div class="post-content">
+            <a href="article9.html" class="post-title">Environmental Impact of Bypass Filtration Systems</a>
+            <span class="post-date">March 15, 2025</span>
+            <p class="post-excerpt">Explore how bypass filters contribute to sustainability efforts and water conservation.</p>
+            <a href="article9.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
 
         <article class="post">
-          <a href="article10.html" class="post-title">Future Trends in Filtration Technology</a>
-          <span class="post-date">March 1, 2025</span>
-          <p class="post-excerpt">Stay ahead of the curve with our look at emerging trends and innovations in filtration tech.</p>
-          <a href="article10.html" class="read-more">Read More &raquo;</a>
+          <img class="post-thumbnail" src="thumbnails/article10.jpg" alt="Future Trends">
+          <div class="post-content">
+            <a href="article10.html" class="post-title">Future Trends in Filtration Technology</a>
+            <span class="post-date">March 1, 2025</span>
+            <p class="post-excerpt">Stay ahead of the curve with our look at emerging trends and innovations in filtration tech.</p>
+            <a href="article10.html" class="read-more">Read More &raquo;</a>
+          </div>
         </article>
       </section>
 
